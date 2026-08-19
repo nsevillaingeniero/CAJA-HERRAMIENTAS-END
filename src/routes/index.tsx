@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, CalendarDays } from "lucide-react";
 
+import heroAsset from "@/assets/estudiantes-end.webp";
+
 import { ResourceCard, TutorialCard } from "@/components/shared/Cards";
 import {
   featuredResources,
@@ -30,43 +32,49 @@ function Index() {
 
   return (
     <>
-      {/* Hero sobrio */}
-      <section className="border-b border-line bg-surface">
-        <div className="mx-auto max-w-[78rem] px-5 py-14 sm:px-8 lg:py-16">
-          <p className="eyebrow text-end-600">Acompañamiento docente · IUEND</p>
-          <h1 className="mt-3 max-w-3xl font-display text-3xl font-extrabold leading-tight tracking-tight text-end-800 sm:text-4xl">
+      {/* Hero institucional */}
+      <section className="relative overflow-hidden bg-end-800">
+        <img
+          src={heroAsset}
+          alt="Estudiantes de la Escuela Nacional del Deporte en el campus"
+          className="absolute inset-0 size-full object-cover opacity-25"
+          loading="eager"
+        />
+        <div className="relative mx-auto max-w-[78rem] px-5 py-16 sm:px-8 lg:py-20">
+          <p className="eyebrow text-gold-400">Acompañamiento docente · IUEND</p>
+          <h1 className="mt-3 max-w-3xl font-display text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
             Caja de Herramientas para el docente END
           </h1>
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-soft">
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/80">
             {SITE.tagline} Recursos digitales, tutoriales de END Digital y
             capacitaciones para llevar tus clases más lejos.
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <Link
               to="/recursos"
-              className="inline-flex items-center gap-2 rounded-control bg-end-700 px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-end-800"
+              className="inline-flex items-center gap-2 rounded-control bg-gold-400 px-5 py-2.5 text-sm font-bold text-end-900 transition-colors hover:bg-gold-300"
             >
               Explorar recursos <ArrowRight className="size-4" />
             </Link>
             <Link
               to="/end-digital"
-              className="inline-flex items-center gap-2 rounded-control border border-line-strong px-5 py-2.5 text-sm font-bold text-end-700 transition-colors hover:border-end-400 hover:bg-end-50"
+              className="inline-flex items-center gap-2 rounded-control border border-white/40 px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-white/10"
             >
               Tutoriales de END Digital
             </Link>
           </div>
 
-          <dl className="mt-10 flex flex-wrap gap-x-10 gap-y-4 border-t border-line pt-6">
+          <dl className="mt-10 flex flex-wrap gap-x-10 gap-y-4 border-t border-white/20 pt-6">
             {[
               { n: featuredResources(99).length, l: "Recursos" },
               { n: tutorials.length, l: "Tutoriales" },
               { n: trainings.length, l: "Capacitaciones" },
             ].map((stat) => (
               <div key={stat.l}>
-                <dt className="font-display text-2xl font-extrabold text-end-700">
+                <dt className="font-display text-2xl font-extrabold text-white">
                   {stat.n}
                 </dt>
-                <dd className="text-xs font-semibold uppercase tracking-wider text-ink-muted">
+                <dd className="text-xs font-semibold uppercase tracking-wider text-white/70">
                   {stat.l}
                 </dd>
               </div>
