@@ -1,0 +1,179 @@
+[
+ {
+  "topic": "Dinamiza tus clases con Google Meet y su ecosistema de recursos",
+  "track": "google-workspace",
+  "categoryLabel": "Google Meet y su suite",
+  "tools": [
+   "Google Meet",
+   "Google Workspace"
+  ],
+  "date": "2026-08-20",
+  "dateLabel": "Jueves 20 de agosto",
+  "groups": [
+   {
+    "label": "Primer grupo",
+    "start": "08:00",
+    "end": "10:00"
+   },
+   {
+    "label": "Segundo grupo",
+    "start": "10:00",
+    "end": "12:00"
+   },
+   {
+    "label": "Tercer grupo",
+    "start": "14:00",
+    "end": "16:00"
+   }
+  ],
+  "facilitators": [
+   "Mario Alejandro Correa",
+   "Nicolás Sevilla",
+   "Alexis González"
+  ],
+  "audience": "facultades",
+  "support": {
+   "start": "19:00",
+   "end": "20:00",
+   "host": "Julieth Mejía"
+  },
+  "order": 1,
+  "slug": "01-google-meet"
+ },
+ {
+  "topic": "Diapositivas que apoyan al docente y no compiten con su labor",
+  "track": "recursos-digitales",
+  "categoryLabel": "Recursos educativos digitales",
+  "tools": [
+   "Genially",
+   "Canva",
+   "PowerPoint",
+   "Bancos de imágenes"
+  ],
+  "date": "2026-08-21",
+  "dateLabel": "Viernes 21 de agosto",
+  "groups": [
+   {
+    "start": "10:00",
+    "end": "12:00"
+   },
+   {
+    "start": "16:00",
+    "end": "18:00"
+   }
+  ],
+  "facilitators": [
+   "Alexis González",
+   "Nicolás Sevilla"
+  ],
+  "audience": "abierta",
+  "support": {
+   "note": "Se comparte la sesión grabada y tutoriales que la complementan."
+  },
+  "order": 2,
+  "slug": "02-recursos-diapositivas"
+ },
+ {
+  "topic": "Diseña tus estrategias de formación mediadas por tecnologías",
+  "track": "moodle",
+  "categoryLabel": "LMS Moodle y su integración con la suite Google",
+  "tools": [
+   "Moodle",
+   "Google Workspace"
+  ],
+  "date": "2026-08-24",
+  "dateLabel": "Lunes 24 de agosto",
+  "groups": [
+   {
+    "label": "Primer grupo",
+    "start": "08:00",
+    "end": "10:00"
+   },
+   {
+    "label": "Segundo grupo",
+    "start": "10:00",
+    "end": "12:00"
+   },
+   {
+    "label": "Tercer grupo",
+    "start": "14:00",
+    "end": "16:00"
+   }
+  ],
+  "facilitators": [
+   "Duván Giraldo",
+   "Mario Alejandro Correa"
+  ],
+  "audience": "facultades",
+  "support": {
+   "start": "19:00",
+   "end": "20:00",
+   "host": "Julieth Mejía"
+  },
+  "order": 3,
+  "slug": "03-moodle-suite-google"
+ },
+ {
+  "topic": "Diseñando foros, tareas y cuestionarios en Moodle",
+  "track": "moodle",
+  "categoryLabel": "Moodle",
+  "tools": [
+   "Moodle"
+  ],
+  "date": "2026-08-26",
+  "dateLabel": "Miércoles 26 de agosto",
+  "groups": [
+   {
+    "label": "Primer grupo",
+    "start": "08:00",
+    "end": "10:00"
+   },
+   {
+    "label": "Segundo grupo",
+    "start": "10:00",
+    "end": "12:00"
+   },
+   {
+    "label": "Tercer grupo",
+    "start": "14:00",
+    "end": "16:00"
+   }
+  ],
+  "facilitators": [
+   "Duván Giraldo",
+   "Mario Alejandro Correa"
+  ],
+  "audience": "facultades",
+  "support": {
+   "start": "19:00",
+   "end": "20:00",
+   "host": "Julieth Mejía"
+  },
+  "order": 4,
+  "slug": "04-moodle-foros-tareas"
+ },
+ {
+  "topic": "Estrategias didácticas digitales con recursos interactivos",
+  "track": "recursos-digitales",
+  "categoryLabel": "Recursos educativos digitales",
+  "date": "2026-08-28",
+  "dateLabel": "Viernes 28 de agosto",
+  "groups": [
+   {
+    "start": "10:00",
+    "end": "12:00"
+   },
+   {
+    "start": "17:00",
+    "end": "19:00"
+   }
+  ],
+  "facilitators": [
+   "Julieth Mejía",
+   "Nicolás Sevilla"
+  ],
+  "audience": "abierta",
+  "order": 5,
+  "slug": "05-recursos-interactivos"
+ }
+]
