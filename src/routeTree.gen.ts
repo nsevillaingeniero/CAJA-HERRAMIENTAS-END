@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as CapacitacionRouteImport } from './routes/capacitacion'
 import { Route as EndDigitalIndexRouteImport } from './routes/end-digital.index'
 import { Route as EndDigitalSlugRouteImport } from './routes/end-digital.$slug'
+import { Route as NecesitoIntentRouteImport } from './routes/necesito.$intent'
 import { Route as RecursosIndexRouteImport } from './routes/recursos.index'
 import { Route as RecursosSlugRouteImport } from './routes/recursos.$slug'
 import { Route as RecursosCategoriaCategoriaRouteImport } from './routes/recursos.categoria.$categoria'
@@ -37,6 +38,11 @@ const EndDigitalSlugRoute = EndDigitalSlugRouteImport.update({
   path: '/end-digital/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const NecesitoIntentRoute = NecesitoIntentRouteImport.update({
+  id: '/necesito/$intent',
+  path: '/necesito/$intent',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const RecursosIndexRoute = RecursosIndexRouteImport.update({
   id: '/recursos/',
   path: '/recursos/',
@@ -58,6 +64,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/capacitacion': typeof CapacitacionRoute
   '/end-digital/$slug': typeof EndDigitalSlugRoute
+  '/necesito/$intent': typeof NecesitoIntentRoute
   '/recursos/$slug': typeof RecursosSlugRoute
   '/end-digital/': typeof EndDigitalIndexRoute
   '/recursos/': typeof RecursosIndexRoute
@@ -67,6 +74,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/capacitacion': typeof CapacitacionRoute
   '/end-digital/$slug': typeof EndDigitalSlugRoute
+  '/necesito/$intent': typeof NecesitoIntentRoute
   '/recursos/$slug': typeof RecursosSlugRoute
   '/end-digital': typeof EndDigitalIndexRoute
   '/recursos': typeof RecursosIndexRoute
@@ -77,6 +85,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/capacitacion': typeof CapacitacionRoute
   '/end-digital/$slug': typeof EndDigitalSlugRoute
+  '/necesito/$intent': typeof NecesitoIntentRoute
   '/recursos/$slug': typeof RecursosSlugRoute
   '/end-digital/': typeof EndDigitalIndexRoute
   '/recursos/': typeof RecursosIndexRoute
@@ -88,6 +97,7 @@ export interface FileRouteTypes {
     | '/'
     | '/capacitacion'
     | '/end-digital/$slug'
+    | '/necesito/$intent'
     | '/recursos/$slug'
     | '/end-digital/'
     | '/recursos/'
@@ -97,6 +107,7 @@ export interface FileRouteTypes {
     | '/'
     | '/capacitacion'
     | '/end-digital/$slug'
+    | '/necesito/$intent'
     | '/recursos/$slug'
     | '/end-digital'
     | '/recursos'
@@ -106,6 +117,7 @@ export interface FileRouteTypes {
     | '/'
     | '/capacitacion'
     | '/end-digital/$slug'
+    | '/necesito/$intent'
     | '/recursos/$slug'
     | '/end-digital/'
     | '/recursos/'
@@ -116,6 +128,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CapacitacionRoute: typeof CapacitacionRoute
   EndDigitalSlugRoute: typeof EndDigitalSlugRoute
+  NecesitoIntentRoute: typeof NecesitoIntentRoute
   RecursosSlugRoute: typeof RecursosSlugRoute
   EndDigitalIndexRoute: typeof EndDigitalIndexRoute
   RecursosIndexRoute: typeof RecursosIndexRoute
@@ -152,6 +165,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EndDigitalSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/necesito/$intent': {
+      id: '/necesito/$intent'
+      path: '/necesito/$intent'
+      fullPath: '/necesito/$intent'
+      preLoaderRoute: typeof NecesitoIntentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/recursos/': {
       id: '/recursos/'
       path: '/recursos'
@@ -180,6 +200,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CapacitacionRoute: CapacitacionRoute,
   EndDigitalSlugRoute: EndDigitalSlugRoute,
+  NecesitoIntentRoute: NecesitoIntentRoute,
   RecursosSlugRoute: RecursosSlugRoute,
   EndDigitalIndexRoute: EndDigitalIndexRoute,
   RecursosIndexRoute: RecursosIndexRoute,
