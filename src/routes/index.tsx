@@ -143,7 +143,7 @@ function Index() {
       </section>
 
       {/* Recursos destacados */}
-      <section className="bg-paper py-16">
+      <section className="border-t border-line py-16">
         <div className="mx-auto max-w-[78rem] px-5 sm:px-8">
           <h2 className="font-display text-2xl font-extrabold text-end-800">
             Recursos destacados
