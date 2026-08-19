@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as EndDigitalIndexRouteImport } from './routes/end-digital.index'
 import { Route as RecursosIndexRouteImport } from './routes/recursos.index'
 import { Route as RecursosSlugRouteImport } from './routes/recursos.$slug'
 import { Route as RecursosCategoriaCategoriaRouteImport } from './routes/recursos.categoria.$categoria'
@@ -17,6 +18,11 @@ import { Route as RecursosCategoriaCategoriaRouteImport } from './routes/recurso
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EndDigitalIndexRoute = EndDigitalIndexRouteImport.update({
+  id: '/end-digital/',
+  path: '/end-digital/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RecursosIndexRoute = RecursosIndexRouteImport.update({
@@ -39,12 +45,14 @@ const RecursosCategoriaCategoriaRoute =
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/recursos/$slug': typeof RecursosSlugRoute
+  '/end-digital/': typeof EndDigitalIndexRoute
   '/recursos/': typeof RecursosIndexRoute
   '/recursos/categoria/$categoria': typeof RecursosCategoriaCategoriaRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/recursos/$slug': typeof RecursosSlugRoute
+  '/end-digital': typeof EndDigitalIndexRoute
   '/recursos': typeof RecursosIndexRoute
   '/recursos/categoria/$categoria': typeof RecursosCategoriaCategoriaRoute
 }
@@ -52,19 +60,30 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/recursos/$slug': typeof RecursosSlugRoute
+  '/end-digital/': typeof EndDigitalIndexRoute
   '/recursos/': typeof RecursosIndexRoute
   '/recursos/categoria/$categoria': typeof RecursosCategoriaCategoriaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/recursos/$slug' | '/recursos/' | '/recursos/categoria/$categoria'
+    | '/'
+    | '/recursos/$slug'
+    | '/end-digital/'
+    | '/recursos/'
+    | '/recursos/categoria/$categoria'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/recursos/$slug' | '/recursos' | '/recursos/categoria/$categoria'
+  to:
+    | '/'
+    | '/recursos/$slug'
+    | '/end-digital'
+    | '/recursos'
+    | '/recursos/categoria/$categoria'
   id:
     | '__root__'
     | '/'
     | '/recursos/$slug'
+    | '/end-digital/'
     | '/recursos/'
     | '/recursos/categoria/$categoria'
   fileRoutesById: FileRoutesById
@@ -72,6 +91,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   RecursosSlugRoute: typeof RecursosSlugRoute
+  EndDigitalIndexRoute: typeof EndDigitalIndexRoute
   RecursosIndexRoute: typeof RecursosIndexRoute
   RecursosCategoriaCategoriaRoute: typeof RecursosCategoriaCategoriaRoute
 }
@@ -83,6 +103,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/end-digital/': {
+      id: '/end-digital/'
+      path: '/end-digital'
+      fullPath: '/end-digital/'
+      preLoaderRoute: typeof EndDigitalIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/recursos/': {
@@ -112,6 +139,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   RecursosSlugRoute: RecursosSlugRoute,
+  EndDigitalIndexRoute: EndDigitalIndexRoute,
   RecursosIndexRoute: RecursosIndexRoute,
   RecursosCategoriaCategoriaRoute: RecursosCategoriaCategoriaRoute,
 }
