@@ -223,64 +223,7 @@ function Index() {
         </aside>
       </section>
 
-      {/* Facultades */}
-      <section className="bg-end-800 py-16">
-        <div className="mx-auto max-w-[78rem] px-5 sm:px-8">
-          <p className="eyebrow text-gold-300">Comunidad académica</p>
-          <h2 className="mt-2 font-display text-2xl font-extrabold text-white">
-            Facultades de la Escuela Nacional del Deporte
-          </h2>
-          <ul className="mt-8 grid gap-4 sm:grid-cols-3">
-            {faculties.map((faculty) => (
-              <li
-                key={faculty.id}
-                className="rounded-card border border-white/15 bg-end-900/60 p-6"
-              >
-                <p className="font-display text-lg font-bold text-white">
-                  {faculty.shortName ?? faculty.name}
-                </p>
-                <p className="mt-1 text-sm text-end-100">{faculty.name}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      {/* Enlaces institucionales */}
-      <section className="mx-auto max-w-[78rem] px-5 py-16 sm:px-8">
-        <h2 className="font-display text-2xl font-extrabold text-end-800">
-          Trámites y enlaces institucionales
-        </h2>
-        <div className="mt-8 grid gap-8 lg:grid-cols-3">
-          {institutionalGroups().map((group) => (
-            <div key={group.id}>
-              <h3 className="eyebrow text-end-600">{group.label}</h3>
-              <ul className="mt-4 space-y-3">
-                {group.links.map((link) => (
-                  <li key={link.id}>
-                    <a
-                      href={link.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="group flex gap-2 rounded-control border border-line bg-surface p-3 transition-colors hover:border-end-300 hover:bg-end-50"
-                    >
-                      <span className="flex-1">
-                        <span className="block text-sm font-bold text-end-700">
-                          {link.label}
-                        </span>
-                        <span className="mt-0.5 block text-xs text-ink-muted">
-                          {link.description}
-                        </span>
-                      </span>
-                      <ExternalLink className="size-4 shrink-0 text-end-400" />
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </section>
     </>
+
   );
 }
