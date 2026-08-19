@@ -256,18 +256,18 @@ export function formatDuration(minutes: number): string {
 }
 
 export function formatDate(value: string): string {
-  const [year, month, day] = value.split("-").map(Number);
+  const [year = 1970, month = 1, day = 1] = value.split("-").map(Number);
   return new Intl.DateTimeFormat("es-CO", {
     day: "numeric",
     month: "long",
     year: "numeric",
     timeZone: "UTC",
-  }).format(new Date(Date.UTC(year, (month ?? 1) - 1, day ?? 1)));
+  }).format(new Date(Date.UTC(year, month - 1, day)));
 }
 
 export function isPastTraining(training: Training, today = new Date()): boolean {
   if (!training.date) return false;
-  const [y, m, d] = training.date.split("-").map(Number);
+  const [y = 1970, m = 1, d = 1] = training.date.split("-").map(Number);
   const key = y * 10000 + m * 100 + d;
   const todayKey =
     today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
