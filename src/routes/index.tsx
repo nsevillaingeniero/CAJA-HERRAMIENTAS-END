@@ -88,7 +88,7 @@ function Index() {
                 <Link
                   to="/necesito/$intent"
                   params={{ intent: intent.id }}
-                  className="flex h-full flex-col rounded-card border border-end-200 bg-surface p-5 transition-all hover:-translate-y-0.5 hover:border-end-400 hover:shadow-card-hover"
+                  className="flex h-full flex-col rounded-card border border-line bg-surface p-5 transition-colors hover:border-end-400 hover:bg-end-50/40"
                 >
                   <span className="font-display text-base font-bold text-end-700">
                     {intent.label}
