@@ -10,33 +10,142 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BuscarRouteImport } from './routes/buscar'
+import { Route as CapacitacionRouteImport } from './routes/capacitacion'
+import { Route as EndDigitalIndexRouteImport } from './routes/end-digital.index'
+import { Route as EndDigitalSlugRouteImport } from './routes/end-digital.$slug'
+import { Route as NecesitoIntentRouteImport } from './routes/necesito.$intent'
+import { Route as RecursosIndexRouteImport } from './routes/recursos.index'
+import { Route as RecursosSlugRouteImport } from './routes/recursos.$slug'
+import { Route as RecursosCategoriaCategoriaRouteImport } from './routes/recursos.categoria.$categoria'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BuscarRoute = BuscarRouteImport.update({
+  id: '/buscar',
+  path: '/buscar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CapacitacionRoute = CapacitacionRouteImport.update({
+  id: '/capacitacion',
+  path: '/capacitacion',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EndDigitalIndexRoute = EndDigitalIndexRouteImport.update({
+  id: '/end-digital/',
+  path: '/end-digital/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EndDigitalSlugRoute = EndDigitalSlugRouteImport.update({
+  id: '/end-digital/$slug',
+  path: '/end-digital/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NecesitoIntentRoute = NecesitoIntentRouteImport.update({
+  id: '/necesito/$intent',
+  path: '/necesito/$intent',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RecursosIndexRoute = RecursosIndexRouteImport.update({
+  id: '/recursos/',
+  path: '/recursos/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RecursosSlugRoute = RecursosSlugRouteImport.update({
+  id: '/recursos/$slug',
+  path: '/recursos/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RecursosCategoriaCategoriaRoute =
+  RecursosCategoriaCategoriaRouteImport.update({
+    id: '/recursos/categoria/$categoria',
+    path: '/recursos/categoria/$categoria',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/buscar': typeof BuscarRoute
+  '/capacitacion': typeof CapacitacionRoute
+  '/end-digital/$slug': typeof EndDigitalSlugRoute
+  '/necesito/$intent': typeof NecesitoIntentRoute
+  '/recursos/$slug': typeof RecursosSlugRoute
+  '/end-digital/': typeof EndDigitalIndexRoute
+  '/recursos/': typeof RecursosIndexRoute
+  '/recursos/categoria/$categoria': typeof RecursosCategoriaCategoriaRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/buscar': typeof BuscarRoute
+  '/capacitacion': typeof CapacitacionRoute
+  '/end-digital/$slug': typeof EndDigitalSlugRoute
+  '/necesito/$intent': typeof NecesitoIntentRoute
+  '/recursos/$slug': typeof RecursosSlugRoute
+  '/end-digital': typeof EndDigitalIndexRoute
+  '/recursos': typeof RecursosIndexRoute
+  '/recursos/categoria/$categoria': typeof RecursosCategoriaCategoriaRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/buscar': typeof BuscarRoute
+  '/capacitacion': typeof CapacitacionRoute
+  '/end-digital/$slug': typeof EndDigitalSlugRoute
+  '/necesito/$intent': typeof NecesitoIntentRoute
+  '/recursos/$slug': typeof RecursosSlugRoute
+  '/end-digital/': typeof EndDigitalIndexRoute
+  '/recursos/': typeof RecursosIndexRoute
+  '/recursos/categoria/$categoria': typeof RecursosCategoriaCategoriaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/buscar'
+    | '/capacitacion'
+    | '/end-digital/$slug'
+    | '/necesito/$intent'
+    | '/recursos/$slug'
+    | '/end-digital/'
+    | '/recursos/'
+    | '/recursos/categoria/$categoria'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/buscar'
+    | '/capacitacion'
+    | '/end-digital/$slug'
+    | '/necesito/$intent'
+    | '/recursos/$slug'
+    | '/end-digital'
+    | '/recursos'
+    | '/recursos/categoria/$categoria'
+  id:
+    | '__root__'
+    | '/'
+    | '/buscar'
+    | '/capacitacion'
+    | '/end-digital/$slug'
+    | '/necesito/$intent'
+    | '/recursos/$slug'
+    | '/end-digital/'
+    | '/recursos/'
+    | '/recursos/categoria/$categoria'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BuscarRoute: typeof BuscarRoute
+  CapacitacionRoute: typeof CapacitacionRoute
+  EndDigitalSlugRoute: typeof EndDigitalSlugRoute
+  NecesitoIntentRoute: typeof NecesitoIntentRoute
+  RecursosSlugRoute: typeof RecursosSlugRoute
+  EndDigitalIndexRoute: typeof EndDigitalIndexRoute
+  RecursosIndexRoute: typeof RecursosIndexRoute
+  RecursosCategoriaCategoriaRoute: typeof RecursosCategoriaCategoriaRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +157,75 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/buscar': {
+      id: '/buscar'
+      path: '/buscar'
+      fullPath: '/buscar'
+      preLoaderRoute: typeof BuscarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/capacitacion': {
+      id: '/capacitacion'
+      path: '/capacitacion'
+      fullPath: '/capacitacion'
+      preLoaderRoute: typeof CapacitacionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/end-digital/': {
+      id: '/end-digital/'
+      path: '/end-digital'
+      fullPath: '/end-digital/'
+      preLoaderRoute: typeof EndDigitalIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/end-digital/$slug': {
+      id: '/end-digital/$slug'
+      path: '/end-digital/$slug'
+      fullPath: '/end-digital/$slug'
+      preLoaderRoute: typeof EndDigitalSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/necesito/$intent': {
+      id: '/necesito/$intent'
+      path: '/necesito/$intent'
+      fullPath: '/necesito/$intent'
+      preLoaderRoute: typeof NecesitoIntentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/recursos/': {
+      id: '/recursos/'
+      path: '/recursos'
+      fullPath: '/recursos/'
+      preLoaderRoute: typeof RecursosIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/recursos/$slug': {
+      id: '/recursos/$slug'
+      path: '/recursos/$slug'
+      fullPath: '/recursos/$slug'
+      preLoaderRoute: typeof RecursosSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/recursos/categoria/$categoria': {
+      id: '/recursos/categoria/$categoria'
+      path: '/recursos/categoria/$categoria'
+      fullPath: '/recursos/categoria/$categoria'
+      preLoaderRoute: typeof RecursosCategoriaCategoriaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BuscarRoute: BuscarRoute,
+  CapacitacionRoute: CapacitacionRoute,
+  EndDigitalSlugRoute: EndDigitalSlugRoute,
+  NecesitoIntentRoute: NecesitoIntentRoute,
+  RecursosSlugRoute: RecursosSlugRoute,
+  EndDigitalIndexRoute: EndDigitalIndexRoute,
+  RecursosIndexRoute: RecursosIndexRoute,
+  RecursosCategoriaCategoriaRoute: RecursosCategoriaCategoriaRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
