@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, CalendarDays } from "lucide-react";
 
-import heroAsset from "@/assets/estudiantes-end.webp";
+import heroAsset from "@/assets/estudiantes-end.webp.asset.json";
 
 import { ResourceCard, TutorialCard } from "@/components/shared/Cards";
 import {
@@ -35,7 +35,7 @@ function Index() {
       {/* Hero institucional */}
       <section className="relative overflow-hidden bg-end-800">
         <img
-          src={heroAsset}
+          src={heroAsset.url}
           alt="Estudiantes de la Escuela Nacional del Deporte en el campus"
           className="absolute inset-0 size-full object-cover opacity-25"
           loading="eager"
