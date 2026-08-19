@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as RecursosIndexRouteImport } from './routes/recursos.index'
+import { Route as RecursosSlugRouteImport } from './routes/recursos.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,30 +23,39 @@ const RecursosIndexRoute = RecursosIndexRouteImport.update({
   path: '/recursos/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RecursosSlugRoute = RecursosSlugRouteImport.update({
+  id: '/recursos/$slug',
+  path: '/recursos/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/recursos/$slug': typeof RecursosSlugRoute
   '/recursos/': typeof RecursosIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/recursos/$slug': typeof RecursosSlugRoute
   '/recursos': typeof RecursosIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/recursos/$slug': typeof RecursosSlugRoute
   '/recursos/': typeof RecursosIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/recursos/'
+  fullPaths: '/' | '/recursos/$slug' | '/recursos/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/recursos'
-  id: '__root__' | '/' | '/recursos/'
+  to: '/' | '/recursos/$slug' | '/recursos'
+  id: '__root__' | '/' | '/recursos/$slug' | '/recursos/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  RecursosSlugRoute: typeof RecursosSlugRoute
   RecursosIndexRoute: typeof RecursosIndexRoute
 }
 
@@ -65,11 +75,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RecursosIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/recursos/$slug': {
+      id: '/recursos/$slug'
+      path: '/recursos/$slug'
+      fullPath: '/recursos/$slug'
+      preLoaderRoute: typeof RecursosSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  RecursosSlugRoute: RecursosSlugRoute,
   RecursosIndexRoute: RecursosIndexRoute,
 }
 export const routeTree = rootRouteImport
