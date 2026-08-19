@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BuscarRouteImport } from './routes/buscar'
 import { Route as CapacitacionRouteImport } from './routes/capacitacion'
 import { Route as EndDigitalIndexRouteImport } from './routes/end-digital.index'
 import { Route as EndDigitalSlugRouteImport } from './routes/end-digital.$slug'
@@ -21,6 +22,11 @@ import { Route as RecursosCategoriaCategoriaRouteImport } from './routes/recurso
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BuscarRoute = BuscarRouteImport.update({
+  id: '/buscar',
+  path: '/buscar',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CapacitacionRoute = CapacitacionRouteImport.update({
@@ -62,6 +68,7 @@ const RecursosCategoriaCategoriaRoute =
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/buscar': typeof BuscarRoute
   '/capacitacion': typeof CapacitacionRoute
   '/end-digital/$slug': typeof EndDigitalSlugRoute
   '/necesito/$intent': typeof NecesitoIntentRoute
@@ -72,6 +79,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/buscar': typeof BuscarRoute
   '/capacitacion': typeof CapacitacionRoute
   '/end-digital/$slug': typeof EndDigitalSlugRoute
   '/necesito/$intent': typeof NecesitoIntentRoute
@@ -83,6 +91,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/buscar': typeof BuscarRoute
   '/capacitacion': typeof CapacitacionRoute
   '/end-digital/$slug': typeof EndDigitalSlugRoute
   '/necesito/$intent': typeof NecesitoIntentRoute
@@ -95,6 +104,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/buscar'
     | '/capacitacion'
     | '/end-digital/$slug'
     | '/necesito/$intent'
@@ -105,6 +115,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/buscar'
     | '/capacitacion'
     | '/end-digital/$slug'
     | '/necesito/$intent'
@@ -115,6 +126,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/buscar'
     | '/capacitacion'
     | '/end-digital/$slug'
     | '/necesito/$intent'
@@ -126,6 +138,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BuscarRoute: typeof BuscarRoute
   CapacitacionRoute: typeof CapacitacionRoute
   EndDigitalSlugRoute: typeof EndDigitalSlugRoute
   NecesitoIntentRoute: typeof NecesitoIntentRoute
@@ -142,6 +155,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/buscar': {
+      id: '/buscar'
+      path: '/buscar'
+      fullPath: '/buscar'
+      preLoaderRoute: typeof BuscarRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/capacitacion': {
@@ -198,6 +218,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BuscarRoute: BuscarRoute,
   CapacitacionRoute: CapacitacionRoute,
   EndDigitalSlugRoute: EndDigitalSlugRoute,
   NecesitoIntentRoute: NecesitoIntentRoute,
