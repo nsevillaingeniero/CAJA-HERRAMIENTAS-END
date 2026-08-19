@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as RecursosIndexRouteImport } from './routes/recursos.index'
 import { Route as RecursosSlugRouteImport } from './routes/recursos.$slug'
+import { Route as RecursosCategoriaCategoriaRouteImport } from './routes/recursos.categoria.$categoria'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -28,35 +29,51 @@ const RecursosSlugRoute = RecursosSlugRouteImport.update({
   path: '/recursos/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RecursosCategoriaCategoriaRoute =
+  RecursosCategoriaCategoriaRouteImport.update({
+    id: '/recursos/categoria/$categoria',
+    path: '/recursos/categoria/$categoria',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/recursos/$slug': typeof RecursosSlugRoute
   '/recursos/': typeof RecursosIndexRoute
+  '/recursos/categoria/$categoria': typeof RecursosCategoriaCategoriaRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/recursos/$slug': typeof RecursosSlugRoute
   '/recursos': typeof RecursosIndexRoute
+  '/recursos/categoria/$categoria': typeof RecursosCategoriaCategoriaRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/recursos/$slug': typeof RecursosSlugRoute
   '/recursos/': typeof RecursosIndexRoute
+  '/recursos/categoria/$categoria': typeof RecursosCategoriaCategoriaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/recursos/$slug' | '/recursos/'
+  fullPaths:
+    '/' | '/recursos/$slug' | '/recursos/' | '/recursos/categoria/$categoria'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/recursos/$slug' | '/recursos'
-  id: '__root__' | '/' | '/recursos/$slug' | '/recursos/'
+  to: '/' | '/recursos/$slug' | '/recursos' | '/recursos/categoria/$categoria'
+  id:
+    | '__root__'
+    | '/'
+    | '/recursos/$slug'
+    | '/recursos/'
+    | '/recursos/categoria/$categoria'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   RecursosSlugRoute: typeof RecursosSlugRoute
   RecursosIndexRoute: typeof RecursosIndexRoute
+  RecursosCategoriaCategoriaRoute: typeof RecursosCategoriaCategoriaRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -82,6 +99,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RecursosSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/recursos/categoria/$categoria': {
+      id: '/recursos/categoria/$categoria'
+      path: '/recursos/categoria/$categoria'
+      fullPath: '/recursos/categoria/$categoria'
+      preLoaderRoute: typeof RecursosCategoriaCategoriaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -89,6 +113,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   RecursosSlugRoute: RecursosSlugRoute,
   RecursosIndexRoute: RecursosIndexRoute,
+  RecursosCategoriaCategoriaRoute: RecursosCategoriaCategoriaRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
