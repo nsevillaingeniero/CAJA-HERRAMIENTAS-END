@@ -1,12 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, CalendarDays, ExternalLink } from "lucide-react";
+import { ArrowRight, CalendarDays } from "lucide-react";
 
-import heroAsset from "@/assets/estudiantes-end.webp.asset.json";
 import { ResourceCard, TutorialCard } from "@/components/shared/Cards";
 import {
-  faculties,
   featuredResources,
-  institutionalGroups,
   intents,
   resourceCategoriesWithCount,
   trainings,
@@ -33,53 +30,43 @@ function Index() {
 
   return (
     <>
-      {/* Hero institucional */}
-      <section className="relative isolate overflow-hidden bg-end-800">
-        <img
-          src={heroAsset.url}
-          alt="Estudiantes de la Escuela Nacional del Deporte"
-          className="absolute inset-0 size-full object-cover opacity-25"
-        />
-        <div className="relative mx-auto grid max-w-[78rem] gap-8 px-5 py-16 sm:px-8 lg:grid-cols-[1.15fr_1fr] lg:items-center lg:py-24">
-          <div>
-            <p className="eyebrow text-gold-300">Acompañamiento docente · IUEND</p>
-            <h1 className="mt-4 font-display text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
-              Caja de Herramientas para el docente END
-            </h1>
-            <p className="mt-5 max-w-xl text-lg leading-relaxed text-end-100">
-              {SITE.tagline} Recursos digitales, tutoriales de END Digital y
-              capacitaciones para llevar tus clases más lejos.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                to="/recursos"
-                className="inline-flex items-center gap-2 rounded-control bg-gold-400 px-5 py-3 text-sm font-bold text-end-950 transition-colors hover:bg-gold-300"
-              >
-                Explorar recursos <ArrowRight className="size-4" />
-              </Link>
-              <Link
-                to="/end-digital"
-                className="inline-flex items-center gap-2 rounded-control border border-end-200/40 bg-white/10 px-5 py-3 text-sm font-bold text-white backdrop-blur transition-colors hover:bg-white/20"
-              >
-                Tutoriales de END Digital
-              </Link>
-            </div>
+      {/* Hero sobrio */}
+      <section className="border-b border-line bg-surface">
+        <div className="mx-auto max-w-[78rem] px-5 py-14 sm:px-8 lg:py-16">
+          <p className="eyebrow text-end-600">Acompañamiento docente · IUEND</p>
+          <h1 className="mt-3 max-w-3xl font-display text-3xl font-extrabold leading-tight tracking-tight text-end-800 sm:text-4xl">
+            Caja de Herramientas para el docente END
+          </h1>
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-soft">
+            {SITE.tagline} Recursos digitales, tutoriales de END Digital y
+            capacitaciones para llevar tus clases más lejos.
+          </p>
+          <div className="mt-7 flex flex-wrap gap-3">
+            <Link
+              to="/recursos"
+              className="inline-flex items-center gap-2 rounded-control bg-end-700 px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-end-800"
+            >
+              Explorar recursos <ArrowRight className="size-4" />
+            </Link>
+            <Link
+              to="/end-digital"
+              className="inline-flex items-center gap-2 rounded-control border border-line-strong px-5 py-2.5 text-sm font-bold text-end-700 transition-colors hover:border-end-400 hover:bg-end-50"
+            >
+              Tutoriales de END Digital
+            </Link>
           </div>
 
-          <dl className="grid grid-cols-3 gap-3 text-center">
+          <dl className="mt-10 flex flex-wrap gap-x-10 gap-y-4 border-t border-line pt-6">
             {[
               { n: featuredResources(99).length, l: "Recursos" },
               { n: tutorials.length, l: "Tutoriales" },
               { n: trainings.length, l: "Capacitaciones" },
             ].map((stat) => (
-              <div
-                key={stat.l}
-                className="rounded-card border border-white/15 bg-end-900/70 px-4 py-6 backdrop-blur"
-              >
-                <dt className="font-display text-3xl font-extrabold text-gold-300">
+              <div key={stat.l}>
+                <dt className="font-display text-2xl font-extrabold text-end-700">
                   {stat.n}
                 </dt>
-                <dd className="mt-1 text-xs font-semibold uppercase tracking-wider text-end-100">
+                <dd className="text-xs font-semibold uppercase tracking-wider text-ink-muted">
                   {stat.l}
                 </dd>
               </div>
@@ -88,8 +75,9 @@ function Index() {
         </div>
       </section>
 
-      {/* Accesos rápidos por intención — franja azul clara como el portal */}
-      <section className="bg-end-50 py-12">
+
+      {/* Accesos rápidos por intención */}
+      <section className="bg-paper py-12">
         <div className="mx-auto max-w-[78rem] px-5 sm:px-8">
           <h2 className="font-display text-2xl font-extrabold text-end-800">
             ¿Qué necesitas hacer hoy?
@@ -100,7 +88,7 @@ function Index() {
                 <Link
                   to="/necesito/$intent"
                   params={{ intent: intent.id }}
-                  className="flex h-full flex-col rounded-card border border-end-200 bg-surface p-5 transition-all hover:-translate-y-0.5 hover:border-end-400 hover:shadow-card-hover"
+                  className="flex h-full flex-col rounded-card border border-line bg-surface p-5 transition-colors hover:border-end-400 hover:bg-end-50/40"
                 >
                   <span className="font-display text-base font-bold text-end-700">
                     {intent.label}
@@ -137,7 +125,7 @@ function Index() {
               <Link
                 to="/recursos/categoria/$categoria"
                 params={{ categoria: category.id }}
-                className="flex h-full flex-col rounded-card border border-line bg-surface p-5 shadow-card transition-all hover:-translate-y-0.5 hover:border-end-300 hover:shadow-card-hover"
+                className="flex h-full flex-col rounded-card border border-line bg-surface p-5 transition-colors hover:border-end-400 hover:bg-end-50/40"
               >
                 <span className="font-display text-base font-bold text-end-800">
                   {category.name}
@@ -155,7 +143,7 @@ function Index() {
       </section>
 
       {/* Recursos destacados */}
-      <section className="bg-paper py-16">
+      <section className="border-t border-line py-16">
         <div className="mx-auto max-w-[78rem] px-5 sm:px-8">
           <h2 className="font-display text-2xl font-extrabold text-end-800">
             Recursos destacados
@@ -223,64 +211,7 @@ function Index() {
         </aside>
       </section>
 
-      {/* Facultades */}
-      <section className="bg-end-800 py-16">
-        <div className="mx-auto max-w-[78rem] px-5 sm:px-8">
-          <p className="eyebrow text-gold-300">Comunidad académica</p>
-          <h2 className="mt-2 font-display text-2xl font-extrabold text-white">
-            Facultades de la Escuela Nacional del Deporte
-          </h2>
-          <ul className="mt-8 grid gap-4 sm:grid-cols-3">
-            {faculties.map((faculty) => (
-              <li
-                key={faculty.id}
-                className="rounded-card border border-white/15 bg-end-900/60 p-6"
-              >
-                <p className="font-display text-lg font-bold text-white">
-                  {faculty.shortName ?? faculty.name}
-                </p>
-                <p className="mt-1 text-sm text-end-100">{faculty.name}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      {/* Enlaces institucionales */}
-      <section className="mx-auto max-w-[78rem] px-5 py-16 sm:px-8">
-        <h2 className="font-display text-2xl font-extrabold text-end-800">
-          Trámites y enlaces institucionales
-        </h2>
-        <div className="mt-8 grid gap-8 lg:grid-cols-3">
-          {institutionalGroups().map((group) => (
-            <div key={group.id}>
-              <h3 className="eyebrow text-end-600">{group.label}</h3>
-              <ul className="mt-4 space-y-3">
-                {group.links.map((link) => (
-                  <li key={link.id}>
-                    <a
-                      href={link.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="group flex gap-2 rounded-control border border-line bg-surface p-3 transition-colors hover:border-end-300 hover:bg-end-50"
-                    >
-                      <span className="flex-1">
-                        <span className="block text-sm font-bold text-end-700">
-                          {link.label}
-                        </span>
-                        <span className="mt-0.5 block text-xs text-ink-muted">
-                          {link.description}
-                        </span>
-                      </span>
-                      <ExternalLink className="size-4 shrink-0 text-end-400" />
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </section>
     </>
+
   );
 }
