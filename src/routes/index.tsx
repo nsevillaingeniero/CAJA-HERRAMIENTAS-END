@@ -1,24 +1,286 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight, CalendarDays, ExternalLink } from "lucide-react";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+import heroAsset from "@/assets/estudiantes-end.webp.asset.json";
+import { ResourceCard, TutorialCard } from "@/components/shared/Cards";
+import {
+  faculties,
+  featuredResources,
+  institutionalGroups,
+  intents,
+  resourceCategoriesWithCount,
+  trainings,
+  tutorials,
+  isPastTraining,
+} from "@/lib/content";
+import { SITE } from "@/lib/site";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Caja de Herramientas | Escuela Nacional del Deporte" },
+      { name: "description", content: SITE.description },
+      { property: "og:title", content: "Caja de Herramientas | Escuela Nacional del Deporte" },
+      { property: "og:description", content: SITE.description },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
+  const nextTrainings = trainings.filter((t) => !isPastTraining(t)).slice(0, 3);
+  const categories = resourceCategoriesWithCount().slice(0, 8);
+
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      {/* Hero institucional */}
+      <section className="relative isolate overflow-hidden bg-end-800">
+        <img
+          src={heroAsset.url}
+          alt="Estudiantes de la Escuela Nacional del Deporte"
+          className="absolute inset-0 size-full object-cover opacity-25"
+        />
+        <div className="relative mx-auto grid max-w-[78rem] gap-8 px-5 py-16 sm:px-8 lg:grid-cols-[1.15fr_1fr] lg:items-center lg:py-24">
+          <div>
+            <p className="eyebrow text-gold-300">Acompañamiento docente · IUEND</p>
+            <h1 className="mt-4 font-display text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
+              Caja de Herramientas para el docente END
+            </h1>
+            <p className="mt-5 max-w-xl text-lg leading-relaxed text-end-100">
+              {SITE.tagline} Recursos digitales, tutoriales de END Digital y
+              capacitaciones para llevar tus clases más lejos.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link
+                to="/recursos"
+                className="inline-flex items-center gap-2 rounded-control bg-gold-400 px-5 py-3 text-sm font-bold text-end-950 transition-colors hover:bg-gold-300"
+              >
+                Explorar recursos <ArrowRight className="size-4" />
+              </Link>
+              <Link
+                to="/end-digital"
+                className="inline-flex items-center gap-2 rounded-control border border-end-200/40 bg-white/10 px-5 py-3 text-sm font-bold text-white backdrop-blur transition-colors hover:bg-white/20"
+              >
+                Tutoriales de END Digital
+              </Link>
+            </div>
+          </div>
+
+          <dl className="grid grid-cols-3 gap-3 text-center">
+            {[
+              { n: featuredResources(99).length, l: "Recursos" },
+              { n: tutorials.length, l: "Tutoriales" },
+              { n: trainings.length, l: "Capacitaciones" },
+            ].map((stat) => (
+              <div
+                key={stat.l}
+                className="rounded-card border border-white/15 bg-end-900/70 px-4 py-6 backdrop-blur"
+              >
+                <dt className="font-display text-3xl font-extrabold text-gold-300">
+                  {stat.n}
+                </dt>
+                <dd className="mt-1 text-xs font-semibold uppercase tracking-wider text-end-100">
+                  {stat.l}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
+
+      {/* Accesos rápidos por intención — franja azul clara como el portal */}
+      <section className="bg-end-50 py-12">
+        <div className="mx-auto max-w-[78rem] px-5 sm:px-8">
+          <h2 className="font-display text-2xl font-extrabold text-end-800">
+            ¿Qué necesitas hacer hoy?
+          </h2>
+          <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {intents.map((intent) => (
+              <li key={intent.id}>
+                <Link
+                  to="/necesito/$intent"
+                  params={{ intent: intent.id }}
+                  className="flex h-full flex-col rounded-card border border-end-200 bg-surface p-5 transition-all hover:-translate-y-0.5 hover:border-end-400 hover:shadow-card-hover"
+                >
+                  <span className="font-display text-base font-bold text-end-700">
+                    {intent.label}
+                  </span>
+                  <span className="mt-1.5 text-sm text-ink-soft">
+                    {intent.description}
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Categorías de recursos */}
+      <section className="mx-auto max-w-[78rem] px-5 py-16 sm:px-8">
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p className="eyebrow text-end-600">Recursos digitales</p>
+            <h2 className="mt-2 font-display text-2xl font-extrabold text-end-800">
+              Explora por categoría
+            </h2>
+          </div>
+          <Link
+            to="/recursos"
+            className="text-sm font-bold text-end-600 hover:text-end-700"
+          >
+            Ver todos los recursos →
+          </Link>
+        </div>
+        <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {categories.map(({ category, count }) => (
+            <li key={category.id}>
+              <Link
+                to="/recursos/categoria/$categoria"
+                params={{ categoria: category.id }}
+                className="flex h-full flex-col rounded-card border border-line bg-surface p-5 shadow-card transition-all hover:-translate-y-0.5 hover:border-end-300 hover:shadow-card-hover"
+              >
+                <span className="font-display text-base font-bold text-end-800">
+                  {category.name}
+                </span>
+                <span className="mt-1.5 flex-1 text-sm text-ink-soft">
+                  {category.description}
+                </span>
+                <span className="mt-3 text-xs font-bold uppercase tracking-wider text-end-500">
+                  {count} {count === 1 ? "recurso" : "recursos"}
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {/* Recursos destacados */}
+      <section className="bg-paper py-16">
+        <div className="mx-auto max-w-[78rem] px-5 sm:px-8">
+          <h2 className="font-display text-2xl font-extrabold text-end-800">
+            Recursos destacados
+          </h2>
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {featuredResources(4).map((resource) => (
+              <div key={resource.slug} className="relative">
+                <ResourceCard resource={resource} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Tutoriales + capacitación */}
+      <section className="mx-auto grid max-w-[78rem] gap-10 px-5 py-16 sm:px-8 lg:grid-cols-[1.5fr_1fr]">
+        <div>
+          <div className="flex flex-wrap items-end justify-between gap-3">
+            <h2 className="font-display text-2xl font-extrabold text-end-800">
+              Tutoriales de END Digital
+            </h2>
+            <Link
+              to="/end-digital"
+              className="text-sm font-bold text-end-600 hover:text-end-700"
+            >
+              Ver todos →
+            </Link>
+          </div>
+          <div className="mt-6 grid gap-5 sm:grid-cols-2">
+            {tutorials.slice(0, 4).map((tutorial) => (
+              <TutorialCard key={tutorial.slug} tutorial={tutorial} />
+            ))}
+          </div>
+        </div>
+
+        <aside>
+          <div className="flex flex-wrap items-end justify-between gap-3">
+            <h2 className="font-display text-2xl font-extrabold text-end-800">
+              Próximas capacitaciones
+            </h2>
+          </div>
+          <ul className="mt-6 space-y-3">
+            {nextTrainings.map((training) => (
+              <li
+                key={training.slug}
+                className="rounded-card border-l-4 border-gold-400 bg-surface p-4 shadow-card"
+              >
+                <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-end-600">
+                  <CalendarDays className="size-4" aria-hidden />
+                  {training.dateLabel}
+                </p>
+                <p className="mt-2 font-display text-sm font-bold text-end-800">
+                  {training.topic}
+                </p>
+                <p className="mt-1 text-xs text-ink-muted">{training.categoryLabel}</p>
+              </li>
+            ))}
+          </ul>
+          <Link
+            to="/capacitacion"
+            className="mt-5 inline-flex text-sm font-bold text-end-600 hover:text-end-700"
+          >
+            Ver el cronograma completo →
+          </Link>
+        </aside>
+      </section>
+
+      {/* Facultades */}
+      <section className="bg-end-800 py-16">
+        <div className="mx-auto max-w-[78rem] px-5 sm:px-8">
+          <p className="eyebrow text-gold-300">Comunidad académica</p>
+          <h2 className="mt-2 font-display text-2xl font-extrabold text-white">
+            Facultades de la Escuela Nacional del Deporte
+          </h2>
+          <ul className="mt-8 grid gap-4 sm:grid-cols-3">
+            {faculties.map((faculty) => (
+              <li
+                key={faculty.id}
+                className="rounded-card border border-white/15 bg-end-900/60 p-6"
+              >
+                <p className="font-display text-lg font-bold text-white">
+                  {faculty.shortName ?? faculty.name}
+                </p>
+                <p className="mt-1 text-sm text-end-100">{faculty.name}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Enlaces institucionales */}
+      <section className="mx-auto max-w-[78rem] px-5 py-16 sm:px-8">
+        <h2 className="font-display text-2xl font-extrabold text-end-800">
+          Trámites y enlaces institucionales
+        </h2>
+        <div className="mt-8 grid gap-8 lg:grid-cols-3">
+          {institutionalGroups().map((group) => (
+            <div key={group.id}>
+              <h3 className="eyebrow text-end-600">{group.label}</h3>
+              <ul className="mt-4 space-y-3">
+                {group.links.map((link) => (
+                  <li key={link.id}>
+                    <a
+                      href={link.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="group flex gap-2 rounded-control border border-line bg-surface p-3 transition-colors hover:border-end-300 hover:bg-end-50"
+                    >
+                      <span className="flex-1">
+                        <span className="block text-sm font-bold text-end-700">
+                          {link.label}
+                        </span>
+                        <span className="mt-0.5 block text-xs text-ink-muted">
+                          {link.description}
+                        </span>
+                      </span>
+                      <ExternalLink className="size-4 shrink-0 text-end-400" />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+    </>
   );
 }
