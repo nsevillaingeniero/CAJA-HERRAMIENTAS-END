@@ -30,53 +30,43 @@ function Index() {
 
   return (
     <>
-      {/* Hero institucional */}
-      <section className="relative isolate overflow-hidden bg-end-800">
-        <img
-          src={heroAsset.url}
-          alt="Estudiantes de la Escuela Nacional del Deporte"
-          className="absolute inset-0 size-full object-cover opacity-25"
-        />
-        <div className="relative mx-auto grid max-w-[78rem] gap-8 px-5 py-16 sm:px-8 lg:grid-cols-[1.15fr_1fr] lg:items-center lg:py-24">
-          <div>
-            <p className="eyebrow text-gold-300">Acompañamiento docente · IUEND</p>
-            <h1 className="mt-4 font-display text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
-              Caja de Herramientas para el docente END
-            </h1>
-            <p className="mt-5 max-w-xl text-lg leading-relaxed text-end-100">
-              {SITE.tagline} Recursos digitales, tutoriales de END Digital y
-              capacitaciones para llevar tus clases más lejos.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                to="/recursos"
-                className="inline-flex items-center gap-2 rounded-control bg-gold-400 px-5 py-3 text-sm font-bold text-end-950 transition-colors hover:bg-gold-300"
-              >
-                Explorar recursos <ArrowRight className="size-4" />
-              </Link>
-              <Link
-                to="/end-digital"
-                className="inline-flex items-center gap-2 rounded-control border border-end-200/40 bg-white/10 px-5 py-3 text-sm font-bold text-white backdrop-blur transition-colors hover:bg-white/20"
-              >
-                Tutoriales de END Digital
-              </Link>
-            </div>
+      {/* Hero sobrio */}
+      <section className="border-b border-line bg-surface">
+        <div className="mx-auto max-w-[78rem] px-5 py-14 sm:px-8 lg:py-16">
+          <p className="eyebrow text-end-600">Acompañamiento docente · IUEND</p>
+          <h1 className="mt-3 max-w-3xl font-display text-3xl font-extrabold leading-tight tracking-tight text-end-800 sm:text-4xl">
+            Caja de Herramientas para el docente END
+          </h1>
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-soft">
+            {SITE.tagline} Recursos digitales, tutoriales de END Digital y
+            capacitaciones para llevar tus clases más lejos.
+          </p>
+          <div className="mt-7 flex flex-wrap gap-3">
+            <Link
+              to="/recursos"
+              className="inline-flex items-center gap-2 rounded-control bg-end-700 px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-end-800"
+            >
+              Explorar recursos <ArrowRight className="size-4" />
+            </Link>
+            <Link
+              to="/end-digital"
+              className="inline-flex items-center gap-2 rounded-control border border-line-strong px-5 py-2.5 text-sm font-bold text-end-700 transition-colors hover:border-end-400 hover:bg-end-50"
+            >
+              Tutoriales de END Digital
+            </Link>
           </div>
 
-          <dl className="grid grid-cols-3 gap-3 text-center">
+          <dl className="mt-10 flex flex-wrap gap-x-10 gap-y-4 border-t border-line pt-6">
             {[
               { n: featuredResources(99).length, l: "Recursos" },
               { n: tutorials.length, l: "Tutoriales" },
               { n: trainings.length, l: "Capacitaciones" },
             ].map((stat) => (
-              <div
-                key={stat.l}
-                className="rounded-card border border-white/15 bg-end-900/70 px-4 py-6 backdrop-blur"
-              >
-                <dt className="font-display text-3xl font-extrabold text-gold-300">
+              <div key={stat.l}>
+                <dt className="font-display text-2xl font-extrabold text-end-700">
                   {stat.n}
                 </dt>
-                <dd className="mt-1 text-xs font-semibold uppercase tracking-wider text-end-100">
+                <dd className="text-xs font-semibold uppercase tracking-wider text-ink-muted">
                   {stat.l}
                 </dd>
               </div>
@@ -84,6 +74,7 @@ function Index() {
           </dl>
         </div>
       </section>
+
 
       {/* Accesos rápidos por intención — franja azul clara como el portal */}
       <section className="bg-end-50 py-12">
