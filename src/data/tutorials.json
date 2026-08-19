@@ -1,0 +1,179 @@
+[
+ {
+  "title": "Cómo insertar contenido interactivo con H5P",
+  "description": "Crea videos con preguntas incrustadas y actividades interactivas dentro de END Digital, con calificación automática.",
+  "category": "actividades-interactivas",
+  "level": "intermedio",
+  "duration": 15,
+  "steps": [
+   "Añadir la actividad Contenido interactivo",
+   "Elegir el tipo de contenido H5P",
+   "Construir la actividad",
+   "Configurar la calificación",
+   "Reutilizar el contenido desde el Banco de contenido"
+  ],
+  "relatedResources": [
+   "h5p"
+  ],
+  "intents": [
+   "crear-actividad",
+   "crear-contenidos"
+  ],
+  "tags": [
+   "h5p",
+   "interactivo",
+   "video",
+   "moodle"
+  ],
+  "date": "2026-04-05",
+  "featured": true,
+  "order": 3,
+  "slug": "contenido-interactivo-h5p",
+  "body": "H5P está integrado en END Digital de forma nativa. Esto significa que el\ncontenido interactivo se crea y se almacena dentro de la plataforma, y que las\ncalificaciones llegan solas al libro de calificaciones del curso.\n\n## Añadir la actividad\n\nCon el modo de edición activo: **Añadir una actividad o un recurso → Contenido\ninteractivo**.\n\nAl crear la actividad, END Digital te pide elegir el tipo de contenido. La lista\nes extensa; estos son los que más rendimiento dan en docencia:\n\n- **Interactive Video**: un video con preguntas que aparecen en momentos\n  determinados.\n- **Course Presentation**: diapositivas con actividades incrustadas.\n- **Quiz (Question Set)**: una batería de preguntas de distinto tipo.\n- **Drag and Drop**: clasificar elementos arrastrándolos.\n- **Dialog Cards**: tarjetas de dos caras para memorización.\n\n## Video interactivo, paso a paso\n\nEs el tipo con mejor relación entre esfuerzo y resultado, especialmente si ya\ntienes videos grabados.\n\nCarga el video o pega la URL. Luego, en la pestaña de añadir interacciones,\nubica la línea de tiempo en el momento donde quieres intervenir y agrega una\npregunta, una nota o un enlace.\n\nLa clave está en la frecuencia: una interacción cada tres o cuatro minutos\nmantiene la atención sin volver la experiencia tediosa. Si el video dura más de\nquince minutos, considera partirlo en piezas más cortas.\n\n## Calificación\n\nEn **Calificación** define el puntaje máximo. Si el contenido incluye preguntas,\nla nota viaja automáticamente al libro de calificaciones.\n\nEn **Opciones de intento** puedes permitir varios intentos, útil cuando la\nactividad tiene propósito de práctica más que de evaluación.\n\n## Reutilizar\n\nTodo lo que creas queda guardado en el **Banco de contenido** del curso. Desde\nallí puedes descargar el archivo `.h5p` y subirlo a otra asignatura, o\nduplicarlo para hacer variantes sin partir de cero.\n\nEsta es la razón por la que vale la pena invertir tiempo la primera vez: el\ncontenido sobrevive al semestre."
+ },
+ {
+  "title": "Cómo crear un cuestionario en END Digital",
+  "description": "Configura una evaluación en línea con calificación automática, control de intentos y retroalimentación para tus estudiantes.",
+  "category": "evaluacion",
+  "level": "intermedio",
+  "duration": 12,
+  "steps": [
+   "Activar la edición y añadir la actividad Cuestionario",
+   "Definir fechas de apertura y cierre",
+   "Configurar el límite de tiempo y los intentos permitidos",
+   "Añadir preguntas desde el banco de preguntas",
+   "Establecer la retroalimentación por intento",
+   "Revisar la vista previa antes de publicar"
+  ],
+  "relatedResources": [
+   "h5p",
+   "quizizz"
+  ],
+  "intents": [
+   "evaluar"
+  ],
+  "tags": [
+   "cuestionario",
+   "evaluación",
+   "calificaciones"
+  ],
+  "date": "2026-03-10",
+  "featured": true,
+  "order": 1,
+  "slug": "crear-cuestionario",
+  "body": "El cuestionario es la actividad de END Digital que más tiempo ahorra a mediano\nplazo: una vez construido el banco de preguntas, puedes reutilizarlo semestre\ntras semestre y la calificación queda registrada sin intervención manual.\n\n## Antes de empezar\n\nConviene tener listas las preguntas en un documento aparte. Redactarlas\ndirectamente en la plataforma suele alargar el proceso y hace más difícil\nrevisar la coherencia del conjunto.\n\nVerifica también que tu curso tenga configurado el libro de calificaciones,\nporque el cuestionario enviará allí los resultados automáticamente.\n\n## Crear la actividad\n\nCon la edición activada, entra al tema donde quieres ubicar la evaluación y usa\n**Añadir una actividad o un recurso → Cuestionario**. Asigna un nombre que el\nestudiante entienda sin ambigüedad: «Parcial 1 — Fisiología del ejercicio» es\nmás claro que «Cuestionario 1».\n\nEn la descripción explica las condiciones de la evaluación: cuántos intentos\ntiene, cuánto dura y qué material puede consultar. Marca la casilla para que\nesa descripción se muestre en la página del curso.\n\n## Configurar tiempo e intentos\n\nEn **Temporalización** define la apertura y el cierre. El límite de tiempo se\ncuenta desde que el estudiante inicia el intento, no desde la hora de apertura.\n\nEn **Calificación**, el número de intentos permitidos es una decisión\npedagógica: un intento se acerca a un parcial tradicional; varios intentos\nconvierten la actividad en una herramienta de práctica. Si permites más de uno,\ndefine qué nota se conserva —la más alta, la última o el promedio.\n\n## Añadir preguntas\n\nLas preguntas se agregan desde **Editar cuestionario → Agregar**. Tienes tres\ncaminos: crear una pregunta nueva, tomarla del banco de preguntas o añadir una\npregunta aleatoria de una categoría.\n\nLa opción de pregunta aleatoria es la más potente: si cargas veinte preguntas en\nuna categoría y pides cinco aleatorias, cada estudiante recibe una combinación\ndistinta. Esto reduce de forma notable la copia entre compañeros.\n\n## Retroalimentación\n\nEn **Opciones de revisión** decides qué ve el estudiante y cuándo. Mostrar las\nrespuestas correctas inmediatamente después del intento es útil en actividades\nde práctica, pero conviene retrasarlo hasta después del cierre cuando se trata\nde una evaluación calificada.\n\nLa **Retroalimentación global** te permite escribir mensajes distintos según el\nrango de nota obtenida, lo que da al estudiante una orientación sobre qué hacer\na continuación.\n\n## Antes de publicar\n\nUsa la vista previa y resuelve el cuestionario completo como si fueras\nestudiante. Es la forma más rápida de detectar preguntas mal formuladas,\npuntajes que no suman lo esperado o imágenes que no cargan."
+ },
+ {
+  "title": "Cómo crear una tarea y recibir entregas",
+  "description": "Configura una actividad de entrega con fechas, formatos permitidos y retroalimentación individual para cada estudiante.",
+  "category": "actividades-interactivas",
+  "level": "basico",
+  "duration": 10,
+  "steps": [
+   "Añadir la actividad Tarea al curso",
+   "Redactar consignas claras",
+   "Definir fecha de entrega y fecha límite",
+   "Configurar los tipos de archivo aceptados",
+   "Elegir el método de calificación",
+   "Calificar y retroalimentar las entregas"
+  ],
+  "intents": [
+   "crear-actividad",
+   "evaluar"
+  ],
+  "tags": [
+   "tarea",
+   "entrega",
+   "evaluación"
+  ],
+  "date": "2026-02-28",
+  "featured": false,
+  "order": 2,
+  "slug": "crear-tarea",
+  "body": "La **Tarea** es la actividad que usarás con más frecuencia: recibe entregas de\nlos estudiantes, guarda la fecha exacta de envío y te da un espacio para\ncalificar y retroalimentar sin salir de la plataforma.\n\n## Crear la actividad\n\nCon el modo de edición activo: **Añadir una actividad o un recurso → Tarea**.\n\nEl nombre debe indicar qué se entrega, no solo numerar. «Informe de laboratorio\n— Evaluación antropométrica» comunica mucho más que «Tarea 3».\n\n## Escribir la consigna\n\nEste es el punto donde se resuelven o se generan la mayoría de las dudas del\ngrupo. Una consigna útil responde cuatro cosas:\n\n1. Qué debe producir el estudiante.\n2. En qué formato y extensión.\n3. Con qué criterios se va a evaluar.\n4. Hasta cuándo hay plazo.\n\nSi tienes una rúbrica, enúnciala aquí aunque después la configures formalmente.\n\n## Fechas\n\nEND Digital distingue tres fechas y conviene no confundirlas:\n\n- **Permitir entregas desde**: cuándo se habilita el envío.\n- **Fecha de entrega**: el plazo previsto. Las entregas posteriores se aceptan\n  pero quedan marcadas como retrasadas.\n- **Fecha límite**: el cierre real. Después de esta no se puede entregar.\n\nDejar la fecha límite algunas horas después de la fecha de entrega absorbe los\nproblemas de conexión de última hora sin flexibilizar el plazo de forma\nindefinida.\n\n## Tipos de entrega\n\nEn **Tipos de entrega** eliges entre archivos subidos, texto en línea o ambos.\n\nSi esperas un documento, limita los **tipos de archivo aceptados** —por ejemplo,\nsolo PDF. Esto evita recibir formatos que no puedes abrir y estandariza la\nrevisión.\n\n## Calificar\n\nDesde la actividad, **Ver todas las entregas** te muestra el estado de cada\nestudiante. Puedes calificar en línea, escribir retroalimentación y, si lo\nconfiguraste, aplicar una rúbrica.\n\nLa retroalimentación individual es lo que diferencia una entrega digital de un\nbuzón: dedica al menos una línea concreta por estudiante sobre qué mejorar."
+ },
+ {
+  "title": "Configurar el libro de calificaciones",
+  "description": "Organiza las notas por categorías, define ponderaciones y deja que END Digital calcule la nota final por ti.",
+  "category": "calificaciones",
+  "level": "avanzado",
+  "duration": 18,
+  "steps": [
+   "Entrar a la configuración de calificaciones",
+   "Crear categorías por tipo de evaluación",
+   "Asignar las actividades a cada categoría",
+   "Definir la ponderación de cada categoría",
+   "Verificar el cálculo con un caso de prueba"
+  ],
+  "intents": [
+   "evaluar",
+   "aprender-moodle"
+  ],
+  "tags": [
+   "calificaciones",
+   "notas",
+   "ponderación",
+   "moodle"
+  ],
+  "date": "2026-05-12",
+  "featured": false,
+  "order": 1,
+  "slug": "libro-calificaciones",
+  "body": "El libro de calificaciones es la parte de END Digital que más intimida y la que\nmás trabajo manual ahorra una vez configurada. Bien armado, calcula la nota\nfinal del semestre sin que tengas que abrir una hoja de cálculo.\n\n## Dónde está\n\nDentro del curso, en el menú superior encuentras **Calificaciones**. La vista\ninicial muestra la tabla de todos los estudiantes contra todas las actividades\ncalificables.\n\nPara configurarlo, entra a **Configuración de calificaciones**.\n\n## Pensar en categorías\n\nEl error común es dejar todas las actividades sueltas al mismo nivel. Si tu\nprograma evalúa por tipos —parciales, talleres, trabajo final—, esas son tus\ncategorías.\n\nCrea una categoría por cada componente de la nota con **Añadir categoría**. Cada\nactividad se ubica luego dentro de la categoría que le corresponde.\n\n## Ponderación\n\nEn cada categoría defines cómo se combina lo que hay dentro. La opción **Media\nponderada de calificaciones** es la que corresponde a la mayoría de los\nprogramas de la Escuela: te permite decir que los parciales pesan 40 %, los\ntalleres 30 % y el trabajo final 30 %.\n\nLos pesos se asignan en la columna correspondiente de cada categoría. La suma\ndebe dar 100.\n\n## Verificar antes de confiar\n\nEste paso no es opcional. Toma un estudiante y calcula a mano su nota final con\nlas calificaciones que ya tiene registradas. Compara con lo que muestra END\nDigital.\n\nSi no coinciden, casi siempre la causa es una de estas tres: una actividad\nquedó fuera de su categoría, una categoría tiene un peso mal asignado, o hay\nactividades vacías que se están contando como cero.\n\n## Comunicar la nota\n\nEn **Configuración → Ajustes de calificación del curso** puedes definir qué ve\nel estudiante en su reporte: solo su nota, la posición relativa, o el desglose\npor categorías.\n\nMostrar el desglose por categorías es lo más útil pedagógicamente, porque el\nestudiante entiende de dónde viene su resultado y qué componente necesita\nmejorar."
+ },
+ {
+  "title": "Cómo organizar tu curso para que los estudiantes no se pierdan",
+  "description": "Estructura las secciones, nombra los elementos con claridad y usa la visibilidad para publicar contenido a tiempo.",
+  "category": "configuracion-del-curso",
+  "level": "basico",
+  "duration": 11,
+  "steps": [
+   "Elegir entre formato por temas o por semanas",
+   "Nombrar las secciones con criterio",
+   "Ordenar recursos y actividades",
+   "Usar la visibilidad para dosificar el contenido",
+   "Añadir una sección de orientación inicial"
+  ],
+  "intents": [
+   "aprender-moodle"
+  ],
+  "tags": [
+   "moodle",
+   "organización",
+   "curso",
+   "buenas prácticas"
+  ],
+  "date": "2026-03-22",
+  "featured": false,
+  "order": 2,
+  "slug": "organizar-curso",
+  "body": "La causa más frecuente de que un aula virtual «no funcione» no es técnica: es\nque el estudiante no encuentra lo que busca. Esta guía se ocupa de la\norganización del curso, que es donde se resuelve ese problema.\n\n## Formato: temas o semanas\n\nEn **Configuración del curso → Formato de curso** eliges cómo se agrupan los\ncontenidos.\n\nEl **formato por temas** funciona mejor cuando la asignatura avanza por unidades\nconceptuales y el ritmo puede variar. El **formato semanal** conviene cuando hay\nentregas periódicas fijas, porque cada sección queda fechada automáticamente.\n\nCambiar de formato a mitad de semestre desordena las referencias que los\nestudiantes ya construyeron; conviene decidirlo al inicio.\n\n## Nombrar las secciones\n\nUna sección llamada «Tema 3» no comunica nada. «Unidad 3 — Evaluación\nantropométrica» permite que el estudiante ubique el contenido sin abrir la\nsección.\n\nAñade además un breve resumen en cada sección indicando qué se aborda y qué se\nespera que el estudiante haga. Dos líneas bastan.\n\n## Ordenar dentro de la sección\n\nUn orden que funciona bien: primero la orientación (qué vamos a ver), luego el\nmaterial de consulta, después las actividades y al final la evaluación.\n\nCuando todo aparece mezclado, el estudiante entra a la sección y no sabe por\ndónde empezar. El orden es, en sí mismo, una instrucción.\n\n## Visibilidad\n\nCada elemento puede estar visible u oculto. Preparar el semestre completo con\nanticipación y publicar cada unidad cuando corresponde tiene dos ventajas:\nevitas el trabajo de última hora y el estudiante no se abruma viendo dieciséis\nsemanas de contenido en la primera clase.\n\nCon la edición activa, el menú de cada elemento incluye la opción de ocultarlo.\n\n## Una sección de orientación\n\nReserva la primera sección para lo permanente del curso: el programa, la forma\nde evaluación, el horario de atención, la forma de contacto y las reglas de\nentrega.\n\nEs el lugar al que el estudiante volverá durante todo el semestre, y tenerlo\nresuelto reduce de forma notable las preguntas repetidas."
+ },
+ {
+  "title": "Primeros pasos en END Digital",
+  "description": "Reconoce la interfaz, ubica tus cursos y aprende a activar la edición para empezar a construir tu aula virtual.",
+  "category": "primeros-pasos",
+  "level": "basico",
+  "duration": 8,
+  "steps": [
+   "Ingresar con las credenciales institucionales",
+   "Reconocer el área personal y tus cursos",
+   "Entrar a un curso y leer su estructura",
+   "Activar el modo de edición",
+   "Editar la presentación del curso"
+  ],
+  "intents": [
+   "aprender-moodle"
+  ],
+  "tags": [
+   "moodle",
+   "aula virtual",
+   "inicio"
+  ],
+  "date": "2026-02-15",
+  "featured": false,
+  "order": 1,
+  "slug": "primeros-pasos-end-digital",
+  "body": "Si es la primera vez que entras a END Digital, esta guía cubre lo mínimo\nnecesario para orientarte: dónde están tus cursos, qué significa cada zona de la\npantalla y cómo empezar a modificar tu aula.\n\n## Ingresar\n\nEND Digital usa las credenciales institucionales de la Escuela Nacional del\nDeporte. No se crea una cuenta aparte.\n\nSi el acceso falla, el problema suele estar en la contraseña institucional y no\nen la plataforma; en ese caso el trámite se hace ante el área de sistemas, no\ndentro de END Digital.\n\n## El área personal\n\nAl entrar llegas al **Área personal**, que reúne los cursos en los que estás\nmatriculado como docente. Desde aquí ves de un vistazo tus asignaturas del\nsemestre.\n\nSi un curso que deberías tener no aparece, significa que la matrícula como\ndocente aún no se ha realizado. Ese proceso lo gestiona la coordinación\nacadémica.\n\n## La estructura de un curso\n\nUn curso en END Digital se organiza en **secciones** —por temas o por semanas—\ny dentro de cada sección se ubican dos tipos de elementos:\n\n- **Recursos**: material que el estudiante consulta (archivos, páginas, enlaces,\n  carpetas).\n- **Actividades**: elementos donde el estudiante produce algo o es evaluado\n  (tareas, foros, cuestionarios, contenido interactivo).\n\nEsta distinción es la base de todo lo demás. Cuando más adelante quieras añadir\nalgo, la primera pregunta es siempre: ¿el estudiante solo lo consulta, o tiene\nque hacer algo con ello?\n\n## Activar la edición\n\nPara modificar cualquier cosa necesitas activar el **Modo de edición**, con el\ninterruptor ubicado en la parte superior derecha del curso.\n\nCon la edición activa aparecen los controles: puedes añadir elementos, moverlos\narrastrándolos, renombrarlos y ocultarlos. Un elemento oculto sigue existiendo\npero el estudiante no lo ve, lo que resulta práctico para preparar contenido con\nanticipación y publicarlo el día que corresponde.\n\n## Un primer cambio\n\nEmpieza por algo pequeño: edita la descripción del curso para incluir tu nombre,\nel horario de clase y la forma de contacto. Es información que los estudiantes\nbuscan en la primera semana y que evita una cantidad considerable de correos."
+ }
+]

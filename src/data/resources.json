@@ -1,0 +1,359 @@
+[
+ {
+  "name": "Audacity",
+  "shortDescription": "Editor de audio libre para grabar explicaciones, podcasts y material sonoro accesible.",
+  "description": "Audacity es un editor de audio de código abierto que se instala en el computador. Permite grabar, cortar, limpiar ruido y exportar audio en formatos estándar.\n\nEn docencia sirve para grabar explicaciones breves que acompañen una lectura, producir podcast como trabajo de los estudiantes, o generar versiones sonoras de materiales escritos —lo que aporta directamente a la accesibilidad del curso para estudiantes con dificultades de lectura o baja visión.",
+  "activities": [
+   "Grabación de explicaciones breves",
+   "Podcasts como producto de aprendizaje",
+   "Versiones en audio de materiales escritos",
+   "Limpieza y edición de grabaciones de clase"
+  ],
+  "modality": "escritorio",
+  "pricing": "gratis",
+  "pricingNote": "Software libre y de código abierto.",
+  "categories": [
+   "creacion-de-contenidos",
+   "accesibilidad-e-inclusion"
+  ],
+  "moodleIntegration": "enlace",
+  "moodleUsage": "Exporta el audio en MP3 y súbelo al curso como recurso «Archivo», o incrústalo en una «Página» para que se reproduzca sin descargar.",
+  "languages": [
+   "Español",
+   "Inglés"
+  ],
+  "url": "https://www.audacityteam.org",
+  "intents": [
+   "crear-contenidos"
+  ],
+  "tags": [
+   "audio",
+   "podcast",
+   "accesibilidad",
+   "grabación"
+  ],
+  "featured": false,
+  "order": 9,
+  "slug": "audacity"
+ },
+ {
+  "name": "Canva",
+  "shortDescription": "Diseña presentaciones, infografías y material visual con buen acabado, sin saber diseño gráfico.",
+  "description": "Canva es un editor gráfico en el navegador basado en plantillas. Permite producir presentaciones, infografías, carteles, documentos y video corto con un resultado profesional partiendo de diseños ya armados.\n\nPara docentes tiene un atractivo concreto: Canva ofrece un plan educativo gratuito para profesores de instituciones certificadas, que desbloquea la biblioteca completa de elementos y funciones de trabajo colaborativo. Es la vía más rápida para elevar la calidad visual de tus materiales de clase.",
+  "activities": [
+   "Presentaciones de clase",
+   "Infografías y material de apoyo",
+   "Carteles y piezas para comunicar",
+   "Documentos y guías con diseño cuidado",
+   "Video corto y animaciones sencillas"
+  ],
+  "modality": "multiplataforma",
+  "pricing": "freemium",
+  "pricingNote": "Canva para Educación es gratuito para docentes verificados de instituciones elegibles.",
+  "categories": [
+   "creacion-de-contenidos",
+   "recursos-educativos"
+  ],
+  "moodleIntegration": "embed",
+  "moodleUsage": "Publica el diseño en Canva, copia el código de inserción y pégalo en una «Página» de tu curso usando el editor en modo HTML. También puedes exportar a PDF y subirlo como recurso.",
+  "languages": [
+   "Español",
+   "Inglés"
+  ],
+  "url": "https://www.canva.com/education/",
+  "intents": [
+   "crear-contenidos"
+  ],
+  "tags": [
+   "diseño",
+   "presentación",
+   "infografía",
+   "visual"
+  ],
+  "featured": true,
+  "order": 2,
+  "slug": "canva"
+ },
+ {
+  "name": "Genially",
+  "shortDescription": "Contenidos visuales con capas interactivas: presentaciones, imágenes navegables y escape rooms educativos.",
+  "description": "Genially permite crear piezas visuales donde el usuario hace clic y descubre información por capas: presentaciones no lineales, infografías interactivas, mapas navegables y juegos de escape.\n\nSu fuerte es la narrativa: en vez de entregar todo el contenido de golpe, puedes dosificarlo y hacer que el estudiante lo explore. Requiere algo más de tiempo de preparación que una presentación tradicional, pero el resultado sostiene mucho mejor la atención.",
+  "activities": [
+   "Presentaciones interactivas no lineales",
+   "Infografías con capas de información",
+   "Escape rooms y retos educativos",
+   "Imágenes y mapas navegables",
+   "Guías visuales de estudio"
+  ],
+  "modality": "web",
+  "pricing": "freemium",
+  "pricingNote": "El plan gratuito mantiene las creaciones públicas y muestra la marca de Genially.",
+  "categories": [
+   "creacion-de-contenidos",
+   "actividades-interactivas"
+  ],
+  "moodleIntegration": "embed",
+  "moodleUsage": "Genera el código de inserción en Genially y pégalo en una «Página» del curso mediante el editor HTML. Así el contenido se ve dentro de END Digital.",
+  "languages": [
+   "Español",
+   "Inglés"
+  ],
+  "url": "https://genially.com",
+  "intents": [
+   "crear-contenidos",
+   "crear-actividad"
+  ],
+  "tags": [
+   "interactivo",
+   "diseño",
+   "gamificación",
+   "presentación"
+  ],
+  "featured": false,
+  "order": 7,
+  "slug": "genially"
+ },
+ {
+  "name": "H5P",
+  "shortDescription": "Crea contenido interactivo (videos con preguntas, presentaciones, juegos) directamente dentro de END Digital.",
+  "description": "H5P es un formato abierto para crear contenido interactivo en HTML5. Permite construir más de cuarenta tipos de actividad —video interactivo, presentaciones con preguntas, líneas de tiempo, tarjetas de memoria, arrastrar y soltar— sin escribir una sola línea de código.\n\nSu mayor ventaja para la Escuela Nacional del Deporte es que Moodle lo incluye de forma nativa: el contenido se crea y se guarda dentro de END Digital, y las calificaciones pasan automáticamente al libro de calificaciones del curso. No dependes de una plataforma externa ni de que tus estudiantes creen otra cuenta.",
+  "activities": [
+   "Video interactivo con preguntas incrustadas",
+   "Presentaciones con actividades embebidas",
+   "Ejercicios de arrastrar y soltar",
+   "Tarjetas de memoria y flashcards",
+   "Líneas de tiempo interactivas",
+   "Preguntas de opción múltiple y rellenar espacios"
+  ],
+  "modality": "web",
+  "pricing": "gratis",
+  "pricingNote": "Software libre. Incluido en Moodle sin costo adicional.",
+  "categories": [
+   "actividades-interactivas",
+   "creacion-de-contenidos",
+   "evaluacion"
+  ],
+  "moodleIntegration": "nativa",
+  "moodleUsage": "En tu curso, activa la edición y usa «Añadir una actividad o un recurso» → «Contenido interactivo (H5P)». También puedes subir archivos .h5p al Banco de contenido del curso y reutilizarlos en varias asignaturas.",
+  "languages": [
+   "Español",
+   "Inglés"
+  ],
+  "url": "https://h5p.org",
+  "externalGuide": "https://h5p.org/documentation/for-authors",
+  "intents": [
+   "crear-actividad",
+   "evaluar",
+   "crear-contenidos"
+  ],
+  "tags": [
+   "interactivo",
+   "gamificación",
+   "video",
+   "moodle",
+   "actividad"
+  ],
+  "featured": true,
+  "order": 1,
+  "slug": "h5p"
+ },
+ {
+  "name": "Kahoot!",
+  "shortDescription": "Concursos de preguntas en vivo que despiertan al grupo y sirven para repasar antes de un parcial.",
+  "description": "Kahoot! convierte un cuestionario en un concurso proyectado en pantalla: tú muestras la pregunta, los estudiantes responden desde su celular y el marcador se actualiza en tiempo real.\n\nFunciona especialmente bien como activador al inicio de clase o como repaso antes de una evaluación. No requiere que los estudiantes tengan cuenta: entran con un PIN. Su límite está en el plan gratuito, que restringe el número de participantes y algunos tipos de pregunta.",
+  "activities": [
+   "Concursos de preguntas en vivo",
+   "Repasos gamificados antes de evaluaciones",
+   "Diagnósticos rápidos de conocimientos previos",
+   "Tareas asincrónicas con fecha límite"
+  ],
+  "modality": "web",
+  "pricing": "freemium",
+  "pricingNote": "El plan gratuito cubre lo esencial. Los planes de pago amplían participantes y tipos de pregunta.",
+  "categories": [
+   "actividades-interactivas",
+   "evaluacion",
+   "encuestas-y-votaciones"
+  ],
+  "moodleIntegration": "enlace",
+  "moodleUsage": "Comparte el enlace del reto desde un recurso «URL» en tu curso, o proyéctalo en clase presencial. Los resultados se descargan en Excel desde Kahoot! y se cargan manualmente si quieres registrarlos.",
+  "languages": [
+   "Español",
+   "Inglés"
+  ],
+  "url": "https://kahoot.com",
+  "intents": [
+   "crear-actividad",
+   "evaluar",
+   "promover-participacion"
+  ],
+  "tags": [
+   "gamificación",
+   "concurso",
+   "repaso",
+   "participación",
+   "cuestionario"
+  ],
+  "featured": false,
+  "order": 4,
+  "slug": "kahoot"
+ },
+ {
+  "name": "Mentimeter",
+  "shortDescription": "Preguntas y nubes de palabras en vivo: el grupo responde desde el celular y ves el resultado proyectado.",
+  "description": "Mentimeter permite intercalar preguntas dentro de una presentación y ver las respuestas del grupo en tiempo real: nubes de palabras, escalas, opción múltiple, preguntas abiertas y rankings.\n\nEs útil cuando quieres saber qué está entendiendo el grupo antes de avanzar, o cuando necesitas que participen quienes normalmente no levantan la mano. El anonimato de las respuestas suele soltar conversaciones que de otro modo no ocurren.",
+  "activities": [
+   "Nubes de palabras colaborativas",
+   "Votaciones y escalas de opinión",
+   "Preguntas abiertas anónimas",
+   "Cuestionarios en vivo",
+   "Presentaciones con participación integrada"
+  ],
+  "modality": "web",
+  "pricing": "freemium",
+  "pricingNote": "El plan gratuito limita el número de preguntas por presentación.",
+  "categories": [
+   "encuestas-y-votaciones",
+   "actividades-interactivas",
+   "comunicacion"
+  ],
+  "moodleIntegration": "embed",
+  "moodleUsage": "Comparte el enlace de participación en un recurso «URL», o incrusta la presentación en una «Página» del curso. Los resultados se exportan desde Mentimeter.",
+  "languages": [
+   "Español",
+   "Inglés"
+  ],
+  "url": "https://www.mentimeter.com",
+  "intents": [
+   "promover-participacion",
+   "evaluar"
+  ],
+  "tags": [
+   "participación",
+   "encuesta",
+   "votación",
+   "tiempo real"
+  ],
+  "featured": false,
+  "order": 5,
+  "slug": "mentimeter"
+ },
+ {
+  "name": "NotebookLM",
+  "shortDescription": "Sube tus documentos y la IA responde citando exactamente de dónde sacó cada afirmación.",
+  "description": "NotebookLM es un asistente de Google que trabaja únicamente sobre los documentos que tú le entregas: PDF, presentaciones, documentos o enlaces. A partir de ese material responde preguntas, elabora resúmenes y genera guías de estudio.\n\nLa diferencia frente a un chatbot general es que cada respuesta viene con la cita al fragmento del documento original, lo que reduce el riesgo de información inventada y permite verificar. Es útil para preparar material a partir de bibliografía densa, o para que los estudiantes exploren un corpus de lecturas.",
+  "activities": [
+   "Resúmenes de bibliografía extensa",
+   "Guías de estudio a partir de lecturas",
+   "Preguntas frecuentes sobre un corpus de documentos",
+   "Mapas de temas de un material",
+   "Preparación de material de clase desde fuentes propias"
+  ],
+  "modality": "web",
+  "pricing": "gratis",
+  "pricingNote": "Requiere una cuenta de Google.",
+  "categories": [
+   "inteligencia-artificial",
+   "recursos-educativos"
+  ],
+  "moodleIntegration": "enlace",
+  "moodleUsage": "Es una herramienta de preparación docente más que de aula. Úsala para producir el material y luego sube el resultado a END Digital como recurso o página.",
+  "languages": [
+   "Español",
+   "Inglés"
+  ],
+  "url": "https://notebooklm.google.com",
+  "intents": [
+   "usar-ia",
+   "crear-contenidos"
+  ],
+  "tags": [
+   "ia",
+   "generativa",
+   "resumen",
+   "documentos",
+   "estudio"
+  ],
+  "featured": true,
+  "order": 3,
+  "slug": "notebooklm"
+ },
+ {
+  "name": "Padlet",
+  "shortDescription": "Un muro colaborativo donde el grupo publica ideas, imágenes y enlaces en un mismo espacio.",
+  "description": "Padlet es un tablero digital compartido: los estudiantes publican notas, imágenes, enlaces, audio o video sobre un lienzo común, y todos ven los aportes aparecer en vivo.\n\nFunciona bien para lluvias de ideas, galerías de trabajos, líneas de tiempo colectivas y bitácoras de proceso. Los estudiantes pueden participar sin registrarse, lo que reduce la fricción al empezar.",
+  "activities": [
+   "Lluvias de ideas colectivas",
+   "Galerías de trabajos del grupo",
+   "Muros de preguntas y dudas",
+   "Bitácoras de proceso",
+   "Mapas y líneas de tiempo colaborativas"
+  ],
+  "modality": "multiplataforma",
+  "pricing": "freemium",
+  "pricingNote": "El plan gratuito permite un número limitado de muros activos.",
+  "categories": [
+   "colaboracion",
+   "comunicacion",
+   "actividades-interactivas"
+  ],
+  "moodleIntegration": "embed",
+  "moodleUsage": "Copia el código de inserción de Padlet y pégalo en una «Página» del curso desde el editor HTML, para que el muro quede dentro de END Digital sin salir a otra pestaña.",
+  "languages": [
+   "Español",
+   "Inglés"
+  ],
+  "url": "https://padlet.com",
+  "intents": [
+   "crear-actividad",
+   "promover-participacion"
+  ],
+  "tags": [
+   "colaboración",
+   "muro",
+   "lluvia de ideas",
+   "participación"
+  ],
+  "featured": false,
+  "order": 6,
+  "slug": "padlet"
+ },
+ {
+  "name": "Quizizz",
+  "shortDescription": "Cuestionarios gamificados que cada estudiante resuelve a su ritmo, en clase o como tarea.",
+  "description": "Quizizz plantea cuestionarios con mecánicas de juego, pero a diferencia de un concurso proyectado, cada estudiante avanza a su propio ritmo en su dispositivo, con la pregunta completa en pantalla.\n\nEso lo hace apto tanto para clase en vivo como para asignar tareas con fecha límite. Ofrece además reportes por estudiante y por pregunta, útiles para detectar qué contenido no quedó claro en el grupo.",
+  "activities": [
+   "Cuestionarios gamificados en clase",
+   "Tareas autoevaluables con fecha límite",
+   "Diagnósticos de inicio de unidad",
+   "Repasos con retroalimentación inmediata"
+  ],
+  "modality": "web",
+  "pricing": "freemium",
+  "pricingNote": "El plan gratuito cubre el uso habitual de aula.",
+  "categories": [
+   "evaluacion",
+   "actividades-interactivas"
+  ],
+  "moodleIntegration": "enlace",
+  "moodleUsage": "Comparte el enlace de la actividad desde un recurso «URL» del curso. Descarga los reportes desde Quizizz para revisar el desempeño del grupo.",
+  "languages": [
+   "Español",
+   "Inglés"
+  ],
+  "url": "https://quizizz.com",
+  "intents": [
+   "evaluar",
+   "crear-actividad"
+  ],
+  "tags": [
+   "cuestionario",
+   "gamificación",
+   "repaso",
+   "autoevaluación"
+  ],
+  "featured": false,
+  "order": 8,
+  "slug": "quizizz"
+ }
+]
