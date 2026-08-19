@@ -76,8 +76,8 @@ function Index() {
       </section>
 
 
-      {/* Accesos rápidos por intención — franja azul clara como el portal */}
-      <section className="bg-end-50 py-12">
+      {/* Accesos rápidos por intención */}
+      <section className="bg-paper py-12">
         <div className="mx-auto max-w-[78rem] px-5 sm:px-8">
           <h2 className="font-display text-2xl font-extrabold text-end-800">
             ¿Qué necesitas hacer hoy?
