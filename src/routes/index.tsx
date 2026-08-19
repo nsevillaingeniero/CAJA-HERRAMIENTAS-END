@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, CalendarDays } from "lucide-react";
 
+import heroAsset from "@/assets/estudiantes-end.webp";
+
 import { ResourceCard, TutorialCard } from "@/components/shared/Cards";
 import {
   featuredResources,
